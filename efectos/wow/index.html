@@ -1,0 +1,62 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap4b/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="animate.css">
+<link rel="stylesheet" type="text/css" href="site.css">
+
+
+  </head>
+  <body>
+  <!-- 
+
+
+    -->
+
+  <div id="container">
+    <header>
+      <h1>WOW.js</h1>
+    </header>
+    <div id="main">
+      <section class="wow fadeInDown" style="background-color: #f1c40f;">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quisquam eius, neque aliquam, perspiciatis ea dolorum voluptatum illum dignissimos, libero id eaque. Dolores dolorum voluptatibus sapiente, quo, facere temporibus necessitatibus?</h2>
+      </section>
+      <section class="wow pulse" style="background-color: #e74c3c;" data-wow-iteration="infinite" data-wow-duration="1500ms"><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum laboriosam, facere tempora voluptates quasi deserunt perferendis dolorum! Non cumque repudiandae est, nam fugiat, quaerat recusandae, ad laboriosam enim earum dolore.</h2></section>
+      <section class="section--purple wow slideInRight" data-wow-delay="2s"><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem accusantium suscipit quibusdam aliquid optio quae asperiores, fugit illo pariatur eaque omnis ut commodi culpa aperiam, porro quisquam obcaecati unde quo?</h2></section>
+      <section class="section--blue wow bounceInLeft" data-wow-offset="300"><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quia dicta corrupti, reprehenderit a nihil incidunt soluta nulla molestias repudiandae, accusamus aliquam voluptatum, accusantium maiores culpa adipisci facilis voluptatibus atque.</h2></section>
+      <section class="section--green wow slideInLeft" data-wow-duration="4s"><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi laborum ducimus consequuntur totam quaerat necessitatibus dicta eius nesciunt quis tempora, officia perferendis sunt aliquid, nulla ipsam praesentium voluptate vitae repellendus!</h2></section>
+      <button id="moar" class="btn btn-primary">LOAD MOAR!!</button>
+    </div>
+  </div>
+
+
+<script src="../../bootstrap4b/assets/js/vendor/jquery-slim.min.js"></script>
+<script src="../../bootstrap4b/assets/js/vendor/popper.min.js"></script>
+  <script src="../../bootstrap4b/dist/js/bootstrap.min.js"></script>
+   <script src="wow.js"></script>
+
+   <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
+
+
+  </body>
+  </html>
