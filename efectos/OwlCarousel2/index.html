@@ -1,0 +1,96 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap4b/dist/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="owl.carousel.min.css">
+ <link rel="stylesheet" type="text/css" href="owl.theme.default.min.css">
+
+
+  <style type="text/css">
+   
+
+
+  </style>
+  </head>
+  <body>
+  <!-- 
+
+
+    -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="owl-carousel owl-theme">
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+            <div class="item">
+              <h4><img src="http://lorempixel.com/200/200"></h4>
+            </div>
+          </div>
+          <a class="btn btn-primary mr-3 play">Play</a> 
+          <a class="btn btn-danger stop">Stop</a> 
+  </div>
+</div>
+ 
+
+
+<script src="../../bootstrap4b/assets/js/vendor/jquery-slim.min.js"></script>
+<script src="../../bootstrap4b/assets/js/vendor/popper.min.js"></script>
+  <script src="../../bootstrap4b/dist/js/bootstrap.min.js"></script>
+   <script src="owl.carousel.js"></script>
+
+ <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true
+              });
+              $('.play').on('click', function() {
+                owl.trigger('play.owl.autoplay', [1000])
+              })
+              $('.stop').on('click', function() {
+                owl.trigger('stop.owl.autoplay')
+              })
+            })
+          </script>
+  </body>
+  </html>
