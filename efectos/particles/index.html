@@ -1,0 +1,55 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap4b/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  </head>
+  <body>
+
+
+  <div class="count-particles">
+  <span class="js-count-particles">--</span> particles
+</div>
+
+
+<div id="particles-js"></div>
+
+
+<script src="../../bootstrap4b/assets/js/vendor/jquery-slim.min.js"></script>
+<script src="../../bootstrap4b/assets/js/vendor/popper.min.js"></script>
+  <script src="../../bootstrap4b/dist/js/bootstrap.min.js"></script>
+<script src="particles.js"></script>
+<script src="app.js"></script>
+
+<!-- stats.js -->
+<script src="stats.js"></script>
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+
+ 
+  </body>
+  </html>
