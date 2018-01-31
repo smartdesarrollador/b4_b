@@ -1,0 +1,69 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" type="text/css" href="../../bootstrap4b/dist/css/bootstrap.min.css">
+
+ <link rel="stylesheet" type="text/css" href="demo.css" />
+        <link rel="stylesheet" type="text/css" href="style_common.css" />
+        <link rel="stylesheet" type="text/css" href="style1.css" />
+        
+        <script src="modernizr.custom.69142.js"></script>
+  </head>
+  <body>
+
+<div class="container">
+  <div class="row">
+
+
+    <div class="col-md-4">
+      <!-- html con el efecto hover de imagen-->
+      <div id="grid" class="main">
+        <div class="view">
+          <div class="view-back text-right text-white">
+            <button  class="btn btn-primary">ver mas</button>
+          </div>
+          <img src="1.jpg" />
+        </div>
+        
+      </div>
+         <!-- fin html con el efecto hover de imagen -->
+    </div>
+
+    <div class="col-md-4 bg-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo optio sequi est totam, distinctio soluta! Perspiciatis officia, sunt sequi porro minus fugiat quas aliquam nulla eos optio nam facilis!
+    </div>
+
+       <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo optio sequi est totam, distinctio soluta! Perspiciatis officia, sunt sequi porro minus fugiat quas aliquam nulla eos optio nam facilis!
+       </div>
+  
+  </div>
+</div>
+        
+
+
+<script src="../../bootstrap4b/assets/js/vendor/jquery-slim.min.js"></script>
+<script src="../../bootstrap4b/assets/js/vendor/popper.min.js"></script>
+  <script src="../../bootstrap4b/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript"> 
+      
+      Modernizr.load({
+        test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+        yep : ['http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js','jquery.hoverfold.js'],
+        nope: 'fallback.css',
+        callback : function( url, result, key ) {
+            
+          if( url === 'jquery.hoverfold.js' ) {
+        $( '#grid' ).hoverfold();
+          }
+
+        }
+      });
+        
+    </script>
+
+  </body>
+  </html>
