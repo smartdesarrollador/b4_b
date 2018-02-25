@@ -1,0 +1,65 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <meta property="og:description" name="description" content="Floating Social Share Buttons">
+     
+    <link rel="stylesheet" type="text/css" href="../../bootstrap4b/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="starrr.css">
+  
+
+  </head>
+  <body>
+
+
+   <h1>Click to rate:</h1>
+    <div class='starrr' id='star1'></div>
+
+    <h1>Advanced:</h1>
+    <div class='starrr' id='star2'></div>
+    <br />
+    <input type='text' name='rating' value='2' id='star2_input' />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="../../bootstrap4b/assets/js/vendor/popper.min.js"></script>
+<script src="../../bootstrap4b/dist/js/bootstrap.min.js"></script>
+<script src="starrr.js"></script>
+<script>
+    $('#star1').starrr({
+      change: function(e, value){
+        if (value) {
+          $('.your-choice-was').show();
+          $('.choice').text(value);
+        } else {
+          $('.your-choice-was').hide();
+        }
+      }
+    });
+
+    var $s2input = $('#star2_input');
+    $('#star2').starrr({
+      max: 10,
+      rating: $s2input.val(),
+      change: function(e, value){
+        $s2input.val(value).trigger('input');
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39205841-5', 'dobtco.github.io');
+    ga('send', 'pageview');
+  </script>
+
+ 
+  </body>
+  </html>
