@@ -1,0 +1,142 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap4b/dist/css/bootstrap.min.css">
+  
+  
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="zoom-wrapper">
+
+<img class="img-fluid" style="" id="img_01" src="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image3.png" data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image3.jpg" width="411"  />
+<div id="gal1" >
+ 
+<a  href="#" class="elevatezoom-gallery" data-update="" data-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image1.png" 
+data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image1.jpg">
+<img class="img-fluid" id="img_01" src="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image1.png" width="100"  /></a>
+
+<a  href="#" class="elevatezoom-gallery"
+     data-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image2.png"
+     data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image2.jpg"
+    ><img class="img-fluid" id="" src="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image2.png" width="100"  /></a>
+
+<a href="tester" class="elevatezoom-gallery" 
+     data-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image3.png"
+     data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image3.jpg">
+     <img class="img-fluid" id="" src="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image3.png" width="100"  />
+</a>
+
+<a href="tester" class="elevatezoom-gallery" 
+     data-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image4.png"
+     data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image4.jpg"
+     
+     class="slide-content"
+    ><img class="img-fluid" id="" src="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image4.png" width="100"  /></a>
+    
+</div>
+
+
+      </div>
+      
+    </div>
+    <div class="col-md-7">
+      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente doloremque magni nobis architecto illo deserunt, autem, assumenda amet corporis ex consequatur officia beatae quos laborum ipsa repellendus. Facilis commodi nulla consectetur quos, perspiciatis perferendis consequatur, in qui temporibus officia, adipisci.</h3>
+    </div>
+    
+  </div>
+
+
+
+
+
+
+
+ 
+<script src="jquery-1.8.3.min.js"></script>
+  <script src="jquery.elevatezoom.js"></script>
+<script src="../../bootstrap4b/assets/js/vendor/popper.min.js"></script>
+  <script src="../../bootstrap4b/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function () {
+     $("#select").change(function(e){
+   var currentValue = $("#select").val();
+   if(currentValue == 1){    
+   smallImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image1.png';
+   largeImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image1.jpg';
+   }
+   if(currentValue == 2){    
+   smallImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image2.png';
+   largeImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image2.jpg';
+   }
+   if(currentValue == 3){    
+   smallImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image3.png';
+   largeImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image3.jpg';
+   }
+   if(currentValue == 4){    
+   smallImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image4.png';
+   largeImage = 'http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image4.jpg';
+   }
+  // Using default configuration
+ 
+ 
+   var ez =   $('#img_01').data('elevateZoom');   
+   
+  ez.swaptheimage(smallImage, largeImage); 
+     
+    });
+  
+  // Using custom configuration
+  $("#img_01").elevateZoom({
+    zoomType        : "inner",
+    zoomWindowFadeIn : 500,
+    zoomLensFadeIn: 500,
+    gallery       : "gal1",
+    imageCrossfade: true,
+    zoomWindowWidth:411,
+    zoomWindowHeight:274,
+    zoomWindowOffetx: 10,
+    scrollZoom: true, 
+    cursor:"pointer"      
+  });
+    
+ 
+    $("#img_01").bind("click", function(e) {  
+   var ez =   $('#img_01').data('elevateZoom'); 
+  $.fancybox(ez.getGalleryList());
+            return false;
+    });
+  $("#img_02").elevateZoom({
+    zoomType        : "inner",
+    gallery       : "gal2",
+    tint: true,
+    cursor:"crosshair", 
+    windowHeight:600    
+  });
+            $("#img_03").elevateZoom({
+            zoomType        : "inner",
+            lensShape : "round",
+            lensSize    : 200
+            });
+        
+ 
+    $("#img_02").bind("click", function(e) {  
+   var ez =   $('#img_02').data('elevateZoom'); 
+  $.fancybox(ez.getGalleryList());
+            return false;
+    });    
+    
+    
+     
+    });
+  </script>
+
+  </body>
+  </html>
